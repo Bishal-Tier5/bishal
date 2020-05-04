@@ -1,0 +1,49 @@
+{
+ "background": {
+  "scripts": [
+   "lib/jquery-3.1.0.min.js",
+   "const.js",
+   "auth.js",
+   "background.js"
+  ]
+ },
+ "browser_action": {
+  "default_icon": "icon.png",
+  "default_popup": "popup.html",
+  "default_title": "Group Capture"
+ },
+ "content_scripts": [
+  {
+   "all_frames": true,
+   "css": [
+    "lib/sweetalert2.css",
+    "main.css"
+   ],
+   "js": [
+    "lib/jquery-3.1.0.min.js",
+    "lib/sweetalert.min.js",
+    "text.js",
+    "main.js"
+   ],
+   "matches": [
+    "<all_urls>"
+   ],
+   "run_at": "document_end"
+  }
+ ],
+ "description": "Download all photos from an FB album",
+ "icons": {
+  "128": "icon.png"
+ },
+ "manifest_version": 2,
+ "name": "FB Album Download",
+ "permissions": [
+  "tabs",
+  "storage",
+  "identity"
+ ],
+ "version": "1.0",
+ "web_accessible_resources": [
+  "*.png"
+ ]
+}

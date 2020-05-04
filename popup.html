@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Group Capture</title>
+    <link rel="stylesheet" href="lib/bootstrap-3.2.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="loader.css">
+    <script src="lib/jquery-3.1.0.min.js"></script>
+    <script src="lib/sweetalert.min.js"></script>
+   <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap" rel="stylesheet">
+    <script src="const.js"></script>
+    <script src="text.js"></script>
+    <script src="auth.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="tab-content">
+            <div class="tab-data home-data">
+                <div class="authorized-one" style="display: none">
+                        <p >Logged in as: <span class="active-email"></span> <button class="logout-btn primary pull-right">Logout</button></p>
+                        <div class="user-details" style="margin-top: 14px;font-size: 16px;">
+                                                    
+                            <div class="infoBar" style=" color: rgb(65, 103, 178);">&nbsp;</div>
+                     </div>
+                     <div class="pull-left-horizontal" style="margin-top: 20px;"></div>
+                </div>
+                <div class="unauthorized-one">
+                    <div class="text-desc">
+                        <h2>Login</h2>
+                        <div class="login-section" style="margin-top: 10px;">
+                            <div class="loginErrorBar" style=" color: #e62e36">&nbsp;</div>
+                            <div class="email-section">
+                                 Email
+                                 <input type="email" name="email-gc" id="email">
+                            </div>
+                            
+                            <input type="hidden" name="auth-token" value="t5gc54321">
+
+                            <div class="password-section" >
+                                Password
+                               <input type="password" name="password" id="password">
+                                <button class="login-btn">Login</button>
+                                <!-- <button class="forget-password-btn">Forget Password</button> -->
+                            </div>      
+                        </div>
+                        <div class="forget-section" style="display: none;">
+                            You recently request to reset the password for Group Capture. <br>
+                            <span style="font-weight: bold"> Please check your emails. </span>
+                            <br><br>
+                            <button class="login-btn-section">Login</button>                         
+
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+    
+        </div>
+       
+    </div>
+
+    <div class="loading">Loading&#8230;</div>
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
